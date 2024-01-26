@@ -1,6 +1,6 @@
 # Simple-Twillio-Server-Project
 
-A simple server to send otp-codes to a phone-number
+A simple server made with node js and express js and twilio api to send and verify otp-codes sent to a phone-number
 
 ## Installation
 

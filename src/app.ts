@@ -10,7 +10,7 @@ const client = new Twilio(accountSid, authToken);
 app.use(express.json());
 
 app.post('/api/send-verification', async (req: Request, res: Response) => {
-  const { phoneNumber } = req.body;
+  const { phoneNumber }: { phoneNumber: string } = req.body;
   try {
     const verification = await client.verify.v2
       .services(verifySid)
@@ -24,7 +24,8 @@ app.post('/api/send-verification', async (req: Request, res: Response) => {
 });
 
 app.post('/api/verify', async (req: Request, res: Response) => {
-  const { phoneNumber, otpCode } = req.body;
+  const { phoneNumber, otpCode }: { phoneNumber: string; otpCode: string } =
+    req.body;
   try {
     const verification_check = await client.verify.v2
       .services(verifySid)

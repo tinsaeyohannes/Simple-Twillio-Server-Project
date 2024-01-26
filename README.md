@@ -1,4 +1,4 @@
-# Blog App
+# Simple-Twillio-Server-Project
 
 A simple server to send otp-codes to a phone-number
 
